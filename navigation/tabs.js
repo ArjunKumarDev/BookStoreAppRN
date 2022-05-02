@@ -23,6 +23,7 @@ const Tabs = () => {
           height: "10%",
           backgroundColor: COLORS.black,
         },
+        headerShown: false,
         tabBarIcon: ({ focused }) => {
           const tintColor = focused ? COLORS.white : COLORS.gray;
 
