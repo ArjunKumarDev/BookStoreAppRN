@@ -1,6 +1,6 @@
 import { images } from "../constants";
 
-const bookOtherWordsForHome = {
+export const bookOtherWordsForHome = {
   id: 1,
   bookName: "Other Words For Home",
   bookCover: images.otherWordsForHome,
@@ -16,7 +16,7 @@ const bookOtherWordsForHome = {
   navTintColor: "#000",
 };
 
-const bookTheMetropolis = {
+export const bookTheMetropolis = {
   id: 2,
   bookName: "The Metropolis",
   bookCover: images.theMetropolist,
@@ -32,7 +32,7 @@ const bookTheMetropolis = {
   navTintColor: "#000",
 };
 
-const bookTheTinyDragon = {
+export const bookTheTinyDragon = {
   id: 3,
   bookName: "The Tiny Dragon",
   bookCover: images.theTinyDragon,

@@ -11,10 +11,10 @@ export default function Header() {
   return (
     <View
       style={{
-        flex: 1,
         flexDirection: "row",
         paddingHorizontal: SIZES.padding,
         alignItems: "center",
+        height: 150,
       }}
     >
       {/* Greetings */}

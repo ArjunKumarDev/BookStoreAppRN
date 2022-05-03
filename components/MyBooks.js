@@ -17,6 +17,7 @@ export default function MyBooks({ myBooks }) {
           flex: 1,
           marginLeft: index == 0 ? SIZES.padding : 0,
           marginRight: SIZES.radius,
+          marginTop: 5,
         }}
         onPress={() =>
           navigation.navigate("BookDetail", {
@@ -76,7 +77,7 @@ export default function MyBooks({ myBooks }) {
     );
   };
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, marginTop: 15 }}>
       {/* Header */}
       <View style={style.header}>
         <Text style={style.headerTitle}>My Books</Text>
@@ -92,7 +93,7 @@ export default function MyBooks({ myBooks }) {
           renderItem={renderItem}
           keyExtractor={(item) => `${item?.id}`}
           horizontal
-          showsHorizontalScrollIndicator={false}
+          showsHorizontalScrollIndicator={true}
         />
       </View>
     </View>
