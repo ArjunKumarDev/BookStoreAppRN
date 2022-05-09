@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   View,
   StyleSheet,
@@ -7,11 +7,11 @@ import {
   Text,
 } from "react-native";
 import { COLORS, FONTS, SIZES } from "../constants";
-import { categoriesData } from "../utils/categoriesData";
-export default function CategoryHeader() {
-  const [categories, setCategories] = useState(categoriesData);
-  const [selectedCategory, setselectedCategory] = useState(1);
-
+export default function CategoryHeader({
+  categories,
+  setselectedCategory,
+  selectedCategory,
+}) {
   const renderItem = ({ item }) => {
     console.log("catitem", item);
     return (
@@ -19,14 +19,14 @@ export default function CategoryHeader() {
         style={style.categoryHeader}
         onPress={() => setselectedCategory(item?.id)}
       >
-        {selectedCategory == item.id && (
+        {selectedCategory === item.id && (
           <Text
             style={{ color: COLORS.white, fontWeight: "bold", ...FONTS.h3 }}
           >
             {item.categoryName}
           </Text>
         )}
-        {selectedCategory != item.id && (
+        {selectedCategory !== item.id && (
           <Text
             style={{ color: COLORS.lightGray, fontWeight: "bold", ...FONTS.h3 }}
           >

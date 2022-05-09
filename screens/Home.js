@@ -9,9 +9,13 @@ import {
 } from "../components";
 import { COLORS, SIZES } from "../constants";
 import { myBooksData } from "../utils/booksData";
+import { categoriesData } from "../utils/categoriesData";
 
 export default function Home() {
   const [myBooks, setMyBooks] = useState(myBooksData);
+  const [categories, setCategories] = useState(categoriesData);
+  const [selectedCategory, setselectedCategory] = useState(1);
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.black }}>
       {/* Header Section */}
@@ -29,8 +33,16 @@ export default function Home() {
 
         {/* Categories */}
         <View style={{ marginTop: SIZES.padding }}>
-          <CategoryHeader />
-          <Books />
+          <CategoryHeader
+            categories={categories}
+            setselectedCategory={setselectedCategory}
+            selectedCategory={selectedCategory}
+          />
+          <Books
+            books={myBooks}
+            categories={categories}
+            selectedCategory={selectedCategory}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
