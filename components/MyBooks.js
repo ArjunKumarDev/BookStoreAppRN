@@ -8,8 +8,10 @@ import {
   Image,
 } from "react-native";
 import { COLORS, SIZES, icons, FONTS } from "../constants";
+import { useNavigation } from "@react-navigation/native";
 
 export default function MyBooks({ myBooks }) {
+  const navigation = useNavigation();
   const renderItem = ({ item, index }) => {
     return (
       <TouchableOpacity
