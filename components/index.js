@@ -9,3 +9,4 @@ export { default as BookDescription } from "./BookDescription";
 export { default as NavigationHeader } from "./NavigationHeader";
 export { default as Cover } from "./Cover";
 export { default as BookInfo } from "./BookInfo";
+export { default as Button } from "./Button";

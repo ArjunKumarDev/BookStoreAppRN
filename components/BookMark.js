@@ -2,9 +2,9 @@ import React from "react";
 import { TouchableOpacity, Image } from "react-native";
 import { COLORS, icons } from "../constants";
 
-const BookMark = () => {
+const BookMark = ({ style = { position: "absolute", top: 5, right: 15 } }) => {
   return (
-    <TouchableOpacity style={{ position: "absolute", top: 5, right: 15 }}>
+    <TouchableOpacity style={{ ...style }}>
       <Image
         source={icons.bookmark_icon}
         resizeMode="contain"

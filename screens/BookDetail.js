@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View } from "react-native";
-import { BookCover, BookDescription } from "../components";
+import { BookCover, BookDescription, Button } from "../components";
+import BookMark from "../components/BookMark";
 import { COLORS } from "../constants";
 
 export default function BookDetail({ route }) {
@@ -15,7 +16,13 @@ export default function BookDetail({ route }) {
   return book ? (
     <View style={{ flex: 1, backgroundColor: COLORS.black }}>
       <BookCover book={book} />
-      <BookDescription />
+      <BookDescription book={book} />
+      <View style={{ height: 70, marginBottom: 30 }}>
+        <View style={{ flex: 1, flexDirection: "row" }}>
+          <BookMark />
+          <Button />
+        </View>
+      </View>
     </View>
   ) : (
     <></>
