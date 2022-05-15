@@ -4,7 +4,7 @@ import { COLORS, FONTS, SIZES, icons } from "../constants";
 
 export default function Header() {
   const profileData = {
-    name: "Username",
+    name: "Arjun",
     point: 200,
   };
   const [profile, setProfile] = useState(profileData);

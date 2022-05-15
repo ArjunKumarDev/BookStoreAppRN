@@ -1,8 +1,11 @@
-import React from "react";
-import { TouchableOpacity, Image } from "react-native";
 import { COLORS, icons } from "../constants";
+import { Image, TouchableOpacity } from "react-native";
 
-const BookMark = ({ style = { position: "absolute", top: 5, right: 15 } }) => {
+import React from "react";
+
+export default function BookMark({
+  style = { position: "absolute", top: 5, right: 15 },
+}) {
   return (
     <TouchableOpacity style={{ ...style }}>
       <Image
@@ -12,6 +15,4 @@ const BookMark = ({ style = { position: "absolute", top: 5, right: 15 } }) => {
       />
     </TouchableOpacity>
   );
-};
-
-export default BookMark;
+}

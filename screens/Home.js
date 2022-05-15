@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import { View, SafeAreaView, ScrollView } from "react-native";
 import {
   Books,
   CategoryHeader,
@@ -8,8 +6,11 @@ import {
   TagSection,
 } from "../components";
 import { COLORS, SIZES } from "../constants";
-import { myBooksData } from "../utils/booksData";
+import React, { useState } from "react";
+import { SafeAreaView, ScrollView, View } from "react-native";
+
 import { categoriesData } from "../utils/categoriesData";
+import { myBooksData } from "../utils/booksData";
 
 export default function Home() {
   const [myBooks, setMyBooks] = useState(myBooksData);
